@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Kyisna 💜</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #F3E8FF;
+      --bg2: #E6D6FF;
+      --accent: #A56BD6;
+      --accent-2: #7F4CBF;
+      --text: #2B2430;
+      --muted: #7A6A7A;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,Arial;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text)}
+    .container{min-height:100%;display:flex;align-items:center;justify-content:center;padding:36px}
+
+    .card{width:100%;max-width:980px;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border-radius:20px;padding:28px;box-shadow:0 10px 30px rgba(123,82,170,0.12);display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center}
+
+    .left h1{font-family:Sacramento,cursive;font-size:48px;margin:0 0 6px 0;color:var(--accent-2)}
+    .subtitle{font-weight:600;color:var(--muted);margin-bottom:16px}
+    .message-box{background:linear-gradient(135deg, rgba(255,255,255,0.6), rgba(250,240,255,0.8));border-radius:14px;padding:18px;border:1px solid rgba(140,110,180,0.12)}
+    .message{font-size:18px;line-height:1.6;color:var(--text)}
+
+    .controls{margin-top:14px;display:flex;gap:10px;align-items:center}
+    .btn{padding:10px 14px;border-radius:12px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(120,90,160,0.18);color:var(--accent-2)}
+
+    .right{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .kuromi-card{width:100%;max-width:380px;background:linear-gradient(180deg,#fff,#f8f1ff);padding:18px;border-radius:16px;border:1px solid rgba(140,110,180,0.08);box-shadow:0 8px 20px rgba(120,80,170,0.07);text-align:center}
+
+    .skull{width:140px;height:140px;margin:6px auto 2px;display:block}
+    .name{font-size:20px;font-weight:700;color:var(--accent-2);margin-top:6px}
+    .wish{color:var(--muted);font-size:14px}
+    .hearts{display:flex;gap:8px;justify-content:center;margin-top:10px}
+    .heart{width:26px;height:26px;border-radius:8px;background:linear-gradient(180deg,#ffd6eb,#ffb3ee);display:inline-flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 6px 18px rgba(160,90,150,0.12)}
+
+    footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.card{grid-template-columns:1fr;}.right{order:-1}}
+
+    #confetti{position:fixed;left:0;top:0;pointer-events:none;width:100%;height:100%;z-index:30}
+
+    .sparkle{position:relative}
+    .sparkle:after{content:'';position:absolute;right:-6px;top:-6px;width:10px;height:10px;border-radius:50%;background:linear-gradient(90deg,#fff,#ffecff);box-shadow:0 0 18px rgba(170,120,200,0.6);opacity:0;animation:twinkle 2.4s infinite}
+    @keyframes twinkle{0%{opacity:0;transform:scale(.7)}50%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.7)}}
+  </style>
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+  <div class="container">
+    <div class="card">
+      <div class="left">
+        <h1 class="sparkle">Happy Birthday, Kyisna 💜</h1>
+        <div class="subtitle">For my love — with lilac skies and Kuromi vibes 🖤</div>
+        <div class="message-box">
+          <div id="message" class="message">Love, hari ini aku mau bilang kalau bertemu kamu adalah hal paling manis dalam hidupku. Semoga hari ini dipenuhi tawa, cahaya, dan pelukan hangat dari jarak ini. Selamat ulang tahun, Kyisna-ku. You’re my calm, my chaos, my everything 💜🎂</div>
+        </div>
+        <div class="controls">
+          <button class="btn btn-primary" onclick="startConfetti()">Beri Kejutan 🎉</button>
+          <button class="btn btn-ghost" onclick="copyMessage()">Salin Ucapan</button>
+        </div>
+        <footer>With all my love — forever yours 💌</footer>
+      </div>
+      <div class="right">
+        <div class="kuromi-card">
+          <svg class="skull" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#FBE8FF" />
+                <stop offset="1" stop-color="#EEDCFF" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(20,10)">
+              <ellipse cx="80" cy="80" rx="68" ry="70" fill="url(#g1)" stroke="#D4B8FF" stroke-width="3" />
+              <rect x="40" y="40" width="80" height="38" rx="18" fill="#ffffff" transform="rotate(-12 80 60)" opacity="0.95"/>
+              <circle cx="58" cy="90" r="10" fill="#2B2430" />
+              <circle cx="102" cy="90" r="10" fill="#2B2430" />
+              <path d="M60 116 q20 10 40 0" stroke="#2B2430" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <g transform="translate(20,2)">
+                <path d="M60 28 C56 6, 108 6, 104 28 C100 50, 64 48, 60 28" fill="#FFE6F7" stroke="#F4B3E6" stroke-width="2"/>
+                <path d="M63 30 q7 8 16 0 q-9 -8 -16 0" fill="#F2A7E8" />
+              </g>
+            </g>
+          </svg>
+          <div class="name">Untuk: <strong>Kyisna 💜</strong></div>
+          <div class="wish">You make every lilac sky softer, every night warmer 🖤</div>
+          <div class="hearts">
+            <div class="heart">💜</div>
+            <div class="heart">🖤</div>
+            <div class="heart">🌙</div>
+          </div>
+        </div>
+        <iframe style="border-radius:12px;margin-top:10px" src="https://open.spotify.com/embed/track/2nXJkqkS1tIKIyhBcFMmwz?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyMessage(){
+      const text = document.getElementById('message').textContent;
+      navigator.clipboard.writeText(text).then(()=>{alert('Ucapan disalin 💜');});
+    }
+    const canvas=document.getElementById('confetti');const ctx=canvas.getContext('2d');let W=canvas.width=window.innerWidth;let H=canvas.height=window.innerHeight;window.addEventListener('resize',()=>{W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight});function random(min,max){return Math.random()*(max-min)+min}function startConfetti(){const pieces=[];for(let i=0;i<120;i++){pieces.push({x:random(0,W),y:random(-H,0),vx:random(-1.2,1.2),vy:random(1,4),r:random(6,12),c:["#f6c6ff","#e6d6ff","#f9e6ff","#d9b3ff"][Math.floor(random(0,4))]})}let t=0;function draw(){ctx.clearRect(0,0,W,H);for(const p of pieces){p.x+=p.vx;p.y+=p.vy+Math.sin((t+p.x+p.y)/30)*0.6;p.vy+=0.02;ctx.beginPath();ctx.fillStyle=p.c;ctx.ellipse(p.x,p.y,p.r,p.r*0.7,0,0,Math.PI*2);ctx.fill();}t+=1;requestAnimationFrame(draw);}draw();setTimeout(()=>{ctx.clearRect(0,0,W,H)},5500);}  </script>
+</body>
+</html>
